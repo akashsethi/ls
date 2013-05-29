@@ -7,23 +7,7 @@
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/projects/Amazon/grails-app/views/author/upload.gsp" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/projects/linksharing/Linksharing-grailsPlugins.iml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/projects/linksharing/grails-app/views/topic/topicList.gsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/services/com/intelligrape/linksharing/BootStrapService.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/intelligrape/linksharing/BootStrapService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/intelligrape/linksharing/SubscriptionSeriousnessEnum.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/intelligrape/linksharing/TopicVisibilityEnum.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/groovy/com/intelligrape/linksharing/SubscriptionSeriousnessEnum.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/intelligrape/linksharing/Seriousness.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/groovy/com/intelligrape/linksharing/TopicVisibilityEnum.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/intelligrape/linksharing/Visibility.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/UserController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/UserController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/intelligrape/linksharing/Resource.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/intelligrape/linksharing/Resource.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/intelligrape/linksharing/Subscription.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/intelligrape/linksharing/Subscription.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/intelligrape/linksharing/Topic.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/intelligrape/linksharing/Topic.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/intelligrape/linksharing/User.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/intelligrape/linksharing/User.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
     </list>
     <ignored path="linksharing.iws" />
