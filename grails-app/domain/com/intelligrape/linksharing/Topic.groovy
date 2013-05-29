@@ -1,7 +1,7 @@
 package com.intelligrape.linksharing
 class Topic {
     String topicName
-    TopicVisibilityEnum visibility
+    Visibility visibility
     Date dateCreated
     Date lastUpdated
 

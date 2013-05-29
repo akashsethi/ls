@@ -2,5 +2,7 @@ package com.intelligrape.linksharing
 
 class UserController {
     def scaffold = true
-//    def index() { }
+    def login(){
+       render(view: "login")
+    }
 }

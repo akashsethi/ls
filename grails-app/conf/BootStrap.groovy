@@ -1,8 +1,13 @@
 class BootStrap {
-    def bootStrapService
+    def bootstrapService
+
     def init = { servletContext ->
-        bootStrapService.bootStrap()
+
+     bootstrapService.createUser("Akash","Sethi","akash@intelligrape.com","igdefault",true)
     }
+
     def destroy = {
+
     }
+
 }

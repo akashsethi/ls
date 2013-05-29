@@ -2,7 +2,7 @@ package com.intelligrape.linksharing
 
 class Subscription {
 
-    SubscriptionSeriousnessEnum seriousness
+    Seriousness seriousness
     Date dateCreated
     Date lastUpdated
 

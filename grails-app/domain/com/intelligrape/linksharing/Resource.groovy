@@ -1,7 +1,9 @@
 package com.intelligrape.linksharing
 
 abstract class Resource {
+    User creator
     String title
+    String summary
     Date dateCreated
     Date lastUpdated
 

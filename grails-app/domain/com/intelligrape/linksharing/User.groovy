@@ -4,7 +4,7 @@ class User {
     String firstName
     String lastName
     Date dateOfBirth
-    String email
+    String userName
     String password
     Boolean isMale
     Date dateCreated
@@ -19,9 +19,10 @@ class User {
     static constraints = {
         firstName(blank: false)
         lastName(blank: false)
-        email(unique: true, email: true, blank: false)
+        userName(unique: true, email: true, blank: false)
         password(blank: false)
         subscriptions(unique: true)
+        dateOfBirth(nullable: true)
 
     }
 }

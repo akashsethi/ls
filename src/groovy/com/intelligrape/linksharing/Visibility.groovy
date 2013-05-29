@@ -1,11 +1,11 @@
 package com.intelligrape.linksharing
 
-public enum TopicVisibilityEnum {
+public enum Visibility {
 
     PUBLIC("Public"), PRIVATE("Private")
     final String showVisibility
 
-    TopicVisibilityEnum(String value) {
+    Visibility(String value) {
         this.showVisibility = value
     }
 }

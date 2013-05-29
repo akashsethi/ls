@@ -1,11 +1,11 @@
 package com.intelligrape.linksharing
-public enum SubscriptionSeriousnessEnum {
+public enum Seriousness {
 
     CASUAL("Casual"), SERIOUS("Serious"), VERY_SERIOUS("Very_serious")
 
     final String showSeriousness
 
-    SubscriptionSeriousnessEnum(String value) {
+    Seriousness(String value) {
         this.showSeriousness = value
     }
 
