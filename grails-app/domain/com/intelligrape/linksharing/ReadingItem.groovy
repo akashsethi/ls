@@ -2,14 +2,15 @@ package com.intelligrape.linksharing
 
 class ReadingItem {
 
-    Boolean isRead
-    Boolean isFavourite
     Resource resource
+    Boolean isRead = false
+    Boolean isFavourite = false
     Date dateCreated
     Date lastUpdated
 
     static belongsTo = [user: User]
 
     static constraints = {
+    user(unique: 'resource')
     }
 }
