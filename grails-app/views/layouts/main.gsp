@@ -14,6 +14,7 @@
     body {
         padding-top: 60px;
         padding-bottom: 40px;
+        background-image: url("${resource(dir: 'images',file: 'login.jpg')}")
     }
     </style>
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap-responsive.css')}" type="text/css">

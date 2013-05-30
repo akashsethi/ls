@@ -11,11 +11,11 @@ class BootstrapService {
     }
 
     def createTopic(String topicName, Visibility visibility, User owner) {
-        new Topic(topicName: topicName, visibility: visibility, owner: owner).save(flush: true, failOnError: true)
+        return new Topic(topicName: topicName, visibility: visibility, owner: owner).save(flush: true, failOnError: true)
     }
 
     def createSubscription(Seriousness seriousness, User subscriber, Topic topic) {
-        new Subscription(seriousness: seriousness, subscriber: subscriber, topic: topic).save(flush: true, failOnError: true)
+        return new Subscription(seriousness: seriousness, subscriber: subscriber, topic: topic).save(flush: true, failOnError: true)
     }
 
     def createLinkResource(User creator, String title, String summary, Topic topic, String url) {

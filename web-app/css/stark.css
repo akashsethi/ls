@@ -1,0 +1,157 @@
+/*
+
+Tutoralzine Demo 
+Original tutorial: Creating a Facebook-like Registration Form with jQuery
+Tutorial URL: http://tutorialzine.com/2009/08/creating-a-facebook-like-registration-form-with-jquery/
+
+You are free to use the following demo code for any purpose you see fit.
+
+*/
+
+
+/* Page styles */
+
+
+html{
+	background:url('../img/bg1.jpg') repeat #e1f0f6;
+}
+
+/* Form styles */
+
+input,select{
+	padding:3px;
+	color:#333333;
+	
+	border:1px solid #96A6C5;
+	margin-top:2px;
+	width:200px;
+	font-size:13px;
+}
+
+select{
+	width:auto;
+	padding:3px;
+}
+.input-container input
+{
+padding:6px;
+}
+
+.formline{
+	padding:3px;
+}
+
+label{
+	font-size:12px;
+	display:block;
+	text-align:right;
+}
+
+table{
+	width:350px;
+}
+
+td{
+	font-size:11px;
+}
+#clouds{
+	background:url('../img/cloud1.png') no-repeat;
+	height: 145px;
+	left: 50%;
+	position: absolute;
+	top: 250px;
+	margin-left: -542px;
+	width: 222px;
+	z-index: -1;
+}
+
+#clouds:before{
+	content:'';
+	background:url('../img/cloud2.png') no-repeat;
+	height: 102px;
+	right: -960px;
+	position: absolute;
+	top: -125px;
+	width: 156px;
+}
+
+#clouds:after{
+	content:'';
+	background:url('../img/cloud3.png') no-repeat;
+	height: 74px;
+	right: 170px;
+	position: absolute;
+	top: 325px;
+	width: 114px;
+}
+.input-container{
+	padding:1px;
+}
+.input-container select
+{padding:6px;}
+
+#div-regForm,.registered{	
+	border:1px solid #eeeeee;
+	padding:15px;
+	
+	background:url(../img/bg.jpg) repeat-x #cbd4e4;
+	color:#203360;
+	
+	margin:30px auto 40px auto;
+	width:400px;
+}
+
+.form-title,
+.form-sub-title{
+	font-size:20px;
+	
+	font-family:"Lucida Grande",Tahoma,Verdana,Arial,sans-serif;
+	font-size:20px;
+	font-weight:bold;
+}
+
+.form-sub-title{
+  border-bottom: 1px solid #CBD4E4;
+    font-weight: normal;
+    margin-bottom: 15px;
+    padding: 6px 0;
+}
+
+.greenButton{
+	width:auto;
+	margin:10px 0 0 2px;
+	padding:8px 30px;
+	color:white;
+	outline:none;
+	cursor:pointer;
+	font-weight:bold;
+	background-color: #69A74E;
+    background-image: url("https://s-static.ak.fbcdn.net/rsrc.php/v2/y3/x/Uy0S-JwLSOj.png");
+    background-position: -1px -490px;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    border-color: #3B6E22 #3B6E22 #2C5115;
+}
+
+.greenButton:active{
+	background-color: #69A74E;
+	padding:8px 30px;
+	cursor:pointer;
+}
+
+#loading{
+	left:10px;
+	position:relative;
+	top:3px;
+	visibility:hidden;
+}
+
+#error{
+	background-color:#ffebe8;
+	border:1px solid #dd3c10;
+	padding:0px 3px;
+	font-size:12px;
+	text-align:center;
+	margin-top:10px;
+	visibility:hidden;
+}
