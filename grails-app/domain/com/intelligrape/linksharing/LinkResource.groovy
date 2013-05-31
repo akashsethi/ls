@@ -12,4 +12,7 @@ class LinkResource extends Resource {
     static constraints = {
         url(url: true, unique: true)
     }
+    LinkResource(){
+
+    }
 }

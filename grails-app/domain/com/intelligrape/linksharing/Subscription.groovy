@@ -2,7 +2,7 @@ package com.intelligrape.linksharing
 
 class Subscription {
 
-    Seriousness seriousness
+    Seriousness seriousness = Seriousness.CASUAL
     Date dateCreated
     Date lastUpdated
 
@@ -10,5 +10,11 @@ class Subscription {
 
     static constraints = {
 
+    }
+
+    Subscription(Topic topic, Seriousness seriousness = Seriousness.CASUAL) {
+        subscriber = topic?.owner
+        this.topic = topic
+        this.seriousness = seriousness
     }
 }

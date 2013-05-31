@@ -11,6 +11,7 @@ abstract class Resource {
 
     static constraints = {
         title(unique: true)
+        summary(nullable: true)
     }
     static mapping = {
 

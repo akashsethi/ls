@@ -5,9 +5,9 @@ class Topic {
     Date dateCreated
     Date lastUpdated
 
-    String toString() {
-        return topicName
-    }
+//    String toString() {
+//        return topicName
+//    }
 
     static belongsTo = [owner: User]
 

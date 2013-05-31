@@ -3,31 +3,51 @@ package com.intelligrape.linksharing
 class BootstrapService {
 
     def userService
+    def topicService
+    def subscriptionService
+    def linkResourceService
+    def readingItemService
 
     def createUsers() {
         User user = null
         10.times {
-            user = new User(username: "User${it}@gmail.com", password: 'igdefault')
-            if (userService.save(user)) {
-                log.error user.errors.allErrors?.join("\n")
+            user = new User(username: "User${it}@gmail.com", password: "igdefault")
+            if (!userService.save(user)) {
+                println "hiiii"
+                println user.errors.allErrors
             }
         }
     }
 
-    def createTopic(String topicName, Visibility visibility, User owner) {
-        return new Topic(topicName: topicName, visibility: visibility, owner: owner).save(flush: true, failOnError: true)
+
+    def createTopics() {
+        Topic topic = null
+        Subscription subscription = null
+        User.list().eachWithIndex {user, index ->
+            topic = new Topic(owner: user, topicName: "Topic${index}", visibility: Visibility.PUBLIC)
+            if (!(topicService.save(topic) && subscriptionService.subscribe(topic))) {
+                println topic.errors.allErrors
+                println subscription.errors.allErrors
+            }
+        }
     }
 
-    def createSubscription(Seriousness seriousness, User subscriber, Topic topic) {
-        return new Subscription(seriousness: seriousness, subscriber: subscriber, topic: topic).save(flush: true, failOnError: true)
-    }
+    def createLinkResource() {
+        LinkResource linkResource = null
+        Topic.list().eachWithIndex {topic, index ->
+            linkResource = new LinkResource(title: "title${index}", creator: topic.owner, topic: topic,
+                    url: "http://www.linking${index}.com")
+            if (!(linkResourceService.save(linkResource))) {
+                println linkResource.errors.allErrors
+            }
+            else {
+                ReadingItem readingItem = null
+                readingItem = new ReadingItem(resource: linkResource, user: topic.owner, isRead: true)
+                if (!readingItemService.saveReadingItem(readingItem)) {
+                    println readingItem.errors.allErrors
+                }
+            }
+        }
 
-    def createLinkResource(User creator, String title, String summary, Topic topic, String url) {
-        new LinkResource(creator: creator, title: title, summary: summary, topic: topic, url: url).save(flush: true, failOnError: true)
-    }
-
-
-    def createReadingItem(Resource resource, Boolean isRead, Boolean isFavourite, User user) {
-        new ReadingItem(resource: resource, isRead: isRead, isFavourite: isFavourite, user: user)
     }
 }

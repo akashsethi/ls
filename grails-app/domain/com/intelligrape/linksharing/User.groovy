@@ -1,18 +1,16 @@
 package com.intelligrape.linksharing
 
 class User {
+    String username
     String firstName
     String lastName
     Date dateOfBirth
-    String username
     String password
-    Boolean isMale
+    Boolean isMale=true
     Date dateCreated
     Date lastUpdated
 
-    String toString() {
-        return firstName
-    }
+
 
     static hasMany = [topics: Topic, subscriptions: Subscription, readingItems: ReadingItem]
 

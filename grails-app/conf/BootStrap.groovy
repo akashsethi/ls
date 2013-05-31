@@ -6,9 +6,12 @@ class BootStrap {
     def bootstrapService
 
     def init = { servletContext ->
-        if(!User.count()) {
-           bootstrapService.createUsers()
+        if (!User.count()) {
+            bootstrapService.createUsers()
+            bootstrapService.createTopics()
+            bootstrapService.createLinkResource()
         }
+
     }
 
     def destroy = {
