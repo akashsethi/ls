@@ -1,2 +1,14 @@
 *.iml
 *.xml
+*.log
+*.ipr
+*.iws
+*.swp
+.classpath
+*.out
+out/
+target/
+test/
+.idea/
+.settings/
+we-app/WEB-INF/classes/
