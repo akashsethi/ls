@@ -4,7 +4,7 @@ class User {
     String firstName
     String lastName
     Date dateOfBirth
-    String userName
+    String username
     String password
     Boolean isMale
     Date dateCreated
@@ -17,12 +17,12 @@ class User {
     static hasMany = [topics: Topic, subscriptions: Subscription, readingItems: ReadingItem]
 
     static constraints = {
-        firstName(blank: false)
-        lastName(blank: false)
-        userName(unique: true, email: true, blank: false)
+        firstName(nullable: true)
+        lastName(nullable: true)
+        username(unique: true, email: true, blank: false)
         password(blank: false)
         subscriptions(unique: true)
         dateOfBirth(nullable: true)
-
+        isMale(nullable: true)
     }
 }

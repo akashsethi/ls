@@ -4,7 +4,8 @@ class LoginController {
     static defaultAction = "loginHanler"
 
     def loginHandler(LoginCommand loginCommand) {
-        (loginCommand.validate()) ? render("hello") :
+        (loginCommand.validate()) ?
+           render(view: "", session.user=User.findByUsername(loginCommand.userName).id ):
             redirect(controller: "register", action: "login")
         flash.messages = "invalid username/password"
     }

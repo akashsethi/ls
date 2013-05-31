@@ -1,13 +1,17 @@
 package com.intelligrape.linksharing
 
 class BootstrapService {
-    BootstrapService() {
 
-    }
+    def userService
 
-    def createUser(String firstName, String lastName, String userName, String password, Boolean isMale) {
-        User.findByUserName(userName) ?: new User(firstName: firstName, lastName: lastName, userName: userName, password:
-                password, isMale: isMale).save(failOnError: true)
+    def createUsers() {
+        User user = null
+        10.times {
+            user = new User(username: "User${it}@gmail.com", password: 'igdefault')
+            if (userService.save(user)) {
+                log.error user.errors.allErrors?.join("\n")
+            }
+        }
     }
 
     def createTopic(String topicName, Visibility visibility, User owner) {
@@ -25,9 +29,5 @@ class BootstrapService {
 
     def createReadingItem(Resource resource, Boolean isRead, Boolean isFavourite, User user) {
         new ReadingItem(resource: resource, isRead: isRead, isFavourite: isFavourite, user: user)
-    }
-
-    def serviceMethod() {
-
     }
 }

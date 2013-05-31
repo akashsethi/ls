@@ -5,21 +5,23 @@ import grails.validation.Validateable
 @Validateable
 class LoginCommand {
 
-    String userName
+    String username
     String password
 
     static constraints = {
-        userName(blank: false, validator: {val ->
-            if (!User.findByUserName(val)) {
+        username(blank: false, validator: {val ->
+            if (!User.findByUsername(val)) {
                 return ['loginCommand.user.not.found.message']
             }
+
         })
         password(blank: false, validator: {val, obj ->
-            if (val != User.findByUserName(obj.userName).password) {
+            if (val != User.findByUsername(obj.userName).password) {
                 return ['loginCommand.user.not.found.message']
             }
         })
 
     }
+
 
 }

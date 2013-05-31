@@ -15,7 +15,7 @@ class RegisterCommand {
 
     static constraints = {
         userName(blank: false, email: true, validator: {val ->
-            if (User.countByUserName(val)) {
+            if (User.countByUsername(val)) {
                 return ['registerCommand.userName.unique.message']
             }
         })
