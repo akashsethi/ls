@@ -9,7 +9,8 @@
     <link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
     <link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap.css')}" type="text/css">
-
+    <script type="text/javascript" src="${resource(dir: 'js',file: 'jquery.js')}"></script>
+    <script type="text/javascript" src="${resource(dir: 'js',file: 'jquery.validate.js')}"></script>
     <style type="text/css">
     body {
         padding-top: 60px;

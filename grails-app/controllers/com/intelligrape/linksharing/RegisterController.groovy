@@ -13,10 +13,10 @@ class RegisterController {
             bootstrapService.createUser(registerCommand.firstName, registerCommand.lastName, registerCommand.userName
                     , registerCommand.password, registerCommand.isMale)
             flash.message = "Succefully Registered"
-            render view: "login"
+            render view: "/user/login"
         }
         catch (Exception e) {
-            render view: "login", model: [registerCommand: registerCommand]
+            render view: "/user/login", model: [registerCommand: registerCommand]
         }
     }
 

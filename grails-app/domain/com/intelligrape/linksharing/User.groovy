@@ -21,6 +21,6 @@ class User {
         password(blank: false)
         subscriptions(unique: true)
         dateOfBirth(nullable: true)
-        isMale(nullable: true)
+
     }
 }

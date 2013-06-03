@@ -3,7 +3,7 @@ package com.intelligrape.linksharing
 class ReadingItem {
 
     Resource resource
-    Boolean isRead=false
+    Boolean isRead = false
     Boolean isFavourite = false
     Date dateCreated
     Date lastUpdated
