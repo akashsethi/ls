@@ -3,28 +3,28 @@
 <head>
     <title></title>
     <meta content="main" name="layout"/>
-    <script type="text/javascript" src="${resource(dir: 'js',file: 'login.js')}"
+    <script type="text/javascript" src="${resource(dir: 'js', file: 'login.js')}"
     <script type="text/javascript">
         $().ready(function () {
-            // validate the comment form when it is submitted
+
             $("#commentForm").validate();
         });
         $("#signUp").validate({
-            rules: {
-                firstName: "required",
-                lastName: "required",
-                username: {
-                    required: true
+            rules:{
+                firstName:"required",
+                lastName:"required",
+                username:{
+                    required:true
 
                 },
-                password: {
-                    required: true
+                password:{
+                    required:true
 
                 },
-                conformPassword: {
-                    required: true,
+                conformPassword:{
+                    required:true,
 
-                    equalTo: "#password"
+                    equalTo:"#password"
                 }
 
 
@@ -57,19 +57,16 @@
                 <span class="icon-bar"></span>
             </button>
 
-            %{--<div class="media hidden-phone">--}%
-            <a class="brand" href="${createLink(uri: "/")}">LinkSharing
-
-            </a>
+            <a class="brand" href="${createLink(uri: "/")}">LinkSharing</a>
 
             <div class="nav-collapse collapse">
 
-                <g:form id="commentForm" class="navbar-form pull-right" controller="login" action="loginHandler">
+                <g:form id="commentForm" class="navbar-form pull-right" controller="user" action="loginHandler">
+
                     <span>${flash.messages}</span>
-                %{--<g:textField class="span2" name="username" placeholder="Email" required=""/>--}%
                     <input class="span2" name="username" type="email" placeholder="Email" required/>
                     <input class="span2" name="password" type="password" placeholder="Password" required/>
-                %{--<g:passwordField class="span2" name="password" placeholder="Password" required=""/>--}%
+
                     <g:submitButton name="submit" value="signIn" class="btn btn-small btn-primary"/>
                     <a href="#">forgot password?</a>
                 </g:form>
@@ -83,12 +80,12 @@
     <div class="span5 offset7 well" style="margin-top: 60px">
         <div class="span6 offset1">
             ${flash.message}
-            <g:form class="form-signin" name="register" action="registerNewUser">
+            <g:form class="form-signin" name="register" action="register">
                 <legend>Register</legend>
 
                 <div class="control-group">
 
-                    <input class="input-block-level" name="userName" type="email" placeholder="Choose Email*" required>
+                    <input class="input-block-level" name="userName" type="email" placeholder="Choose Email*" required/>
                     <g:renderErrors bean="${registerCommand}" as="list" field="userName"/>
 
                 </div>
@@ -96,7 +93,8 @@
                 <div class="control-label">
 
                     <div class="controls">
-                        <input id="password" class="input-block-level" name="password" type="password" placeholder="Password*"
+                        <input id="password" class="input-block-level" name="password" type="password"
+                               placeholder="Password*"
                                minlength=7 required/>
                         <g:renderErrors bean="${registerCommand}" as="list" field="password"/>
                     </div>

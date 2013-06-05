@@ -20,7 +20,6 @@ class RegisterCommand {
             }
         })
         firstName(blank: false)
-        lastName(blank: false)
         password(blank: false)
         conformPassword(validator: {val, obj ->
             if (val != obj.password) {

@@ -9,8 +9,11 @@ class ReadingItemService {
         readingItem
     }
 
-    ReadingItem createAndSave(LinkResource linkResource) {
-        ReadingItem readingItem = new ReadingItem(resource: linkResource, user: linkResource?.creator)
-        save(readingItem)
+    ReadingItem createAndSave(LinkResource linkResource, Boolean isRead = false, Boolean isFavourite = false) {
+        save(new ReadingItem(resource: linkResource, isFavourite: isFavourite, isRead: isRead, user: linkResource.creator))
+    }
+
+    List<ReadingItem> readingItemList(User user) {
+        return ReadingItem.findAllByUserAndIsRead(user, false)
     }
 }

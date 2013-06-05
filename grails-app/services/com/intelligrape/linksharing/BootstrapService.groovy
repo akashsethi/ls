@@ -32,10 +32,13 @@ class BootstrapService {
 
     def createLinkResource() {
         LinkResource linkResource = null
+        Subscription subscription=null
         Topic.list().eachWithIndex {topic, index ->
             linkResource = new LinkResource(title: "title${index}", creator: topic.owner, topic: topic, url: "http://www.linking${index}.com")
             if (!(linkResourceService.saveAndAddToReadingItem(linkResource))) {
                 println linkResource.errors.allErrors
+                println subscription.errors.allErrors
+
             }
 
         }

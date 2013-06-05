@@ -9,14 +9,16 @@
     <link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
     <link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap.css')}" type="text/css">
-    <script type="text/javascript" src="${resource(dir: 'js',file: 'jquery.js')}"></script>
-    <script type="text/javascript" src="${resource(dir: 'js',file: 'jquery.validate.js')}"></script>
+    <script type="text/javascript" src="${resource(dir: 'js', file: 'jquery.js')}"></script>
+    <script type="text/javascript" src="${resource(dir: 'js', file: 'bootstrap-tab.js')}"></script>
+    <script type="text/javascript" src="${resource(dir: 'js', file: 'jquery.validate.js')}"></script>
     <style type="text/css">
     body {
         padding-top: 60px;
         padding-bottom: 40px;
-        background-image: url("${resource(dir: 'images',file: 'login.jpg')}")
+    %{--background-image: url("${resource(dir: 'images',file: 'login.jpg')}")--}%
     }
+
     </style>
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap-responsive.css')}" type="text/css">
     <g:layoutHead/>
@@ -24,7 +26,6 @@
 </head>
 
 <body>
-
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
@@ -33,13 +34,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="http://twitter.github.io/bootstrap/examples/hero.html#">LinkSharing</a>
+            <a class="brand" href="${createLink(uri: "/")}">LinkSharing</a>
             <!--/.nav-collapse -->
         </div>
     </div>
 </div>
-
-
 
 
 <div class="container-fluid">
@@ -49,6 +48,6 @@
 <div class="footer" role="contentinfo"></div>
 <g:javascript library="application"/>
 <div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
-<r:layoutResources />
+<r:layoutResources/>
 </body>
 </html>

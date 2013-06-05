@@ -5,15 +5,14 @@ class Topic {
     Date dateCreated
     Date lastUpdated
 
-//    String toString() {
-//        return topicName
-//    }
-
     static belongsTo = [owner: User]
 
     static hasMany = [resources: Resource]
 
     static constraints = {
         topicName(unique: true, blank: false)
+    }
+    String toString(){
+        return topicName
     }
 }

@@ -13,8 +13,6 @@ class TopicController {
         [visibilityConstants: visibilities, seriousnessConstants: seriousness, currentUser: currentUser.id]
     }
 
-    //TODO: Move to Topic Controller  03-06   --done
-
     def saveTopic(TopicCommand topicCommand) {
         try {
             User user = User.get(params.currentUser)
@@ -27,11 +25,13 @@ class TopicController {
         }
     }
 
-    //TODO: Move to topic controller 03-06     --done
-    def listTopics() {
-        User user = User.get(1)
-        List<Topic> ownedTopic = Topic.findAllByOwner(user)
-        render ownedTopic
+
+    def listTopic() {
+        if (session.currentUser) {
+            User currentUser = User.get(session.currentUser)
+            List<Topic> ownedTopic = topicService.ownedTopic(currentUser)
+            render ownedTopic
+        }
     }
 
 }

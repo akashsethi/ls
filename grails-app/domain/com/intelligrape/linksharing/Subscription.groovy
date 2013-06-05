@@ -17,4 +17,5 @@ class Subscription {
         this.topic = topic
         this.seriousness = seriousness
     }
+
 }

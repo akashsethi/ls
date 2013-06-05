@@ -17,5 +17,12 @@ class TopicService {
         topic
     }
 
+    List<Topic> publicTopicList() {
+        return Topic.findAllByVisibility(Visibility.PUBLIC)
+    }
+
+    List<Topic> ownedTopic(User owner) {
+        return Topic.findAllByOwner(owner)
+    }
 
 }
