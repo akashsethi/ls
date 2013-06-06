@@ -14,7 +14,7 @@ class SubscriptionService {
     }
 
     List<Subscription> subscribedTopicList(User subscriber){
-      return   Subscription.findAllBySubscriber(subscriber)
+      Subscription.findAllBySubscriber(subscriber)
     }
 
 

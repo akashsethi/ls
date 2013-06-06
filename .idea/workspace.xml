@@ -3,31 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="2952b438-c314-45c3-bffa-cf0d0ef707b0" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Downloads/linksharing/linksharing.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/register/forgotPassword.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/register/passwordReset.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/subscription/updateSeriousness.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/groovy/com/intelligrape/linksharing/PasswordCommand.groovy" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/projects/Amazon/grails-app/views/author/downloadFile.gsp" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/projects/Amazon/grails-app/views/author/upload.gsp" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/projects/linksharing/Linksharing-grailsPlugins.iml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/projects/linksharing/grails-app/views/topic/topicList.gsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/topic/publicTopic.gsp" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/grails-app/views/user/home.gsp" afterPath="$PROJECT_DIR$/grails-app/views/user/dashboard.gsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/grails-app/views/user/login.gsp" afterPath="$PROJECT_DIR$/grails-app/views/login/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/LinkResourceController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/LinkResourceController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/com/intelligrape/linksharing/ApplicationFilters.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/com/intelligrape/linksharing/ApplicationFilters.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/LoginController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/LoginController.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/ReadingItemController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/ReadingItemController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/SubscriptionController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/SubscriptionController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/TopicController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/TopicController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/UserController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/UserController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/intelligrape/linksharing/Subscription.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/intelligrape/linksharing/Subscription.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/RegisterController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/RegisterController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/intelligrape/linksharing/User.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/intelligrape/linksharing/User.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/services/com/intelligrape/linksharing/BootstrapService.groovy" afterPath="$PROJECT_DIR$/grails-app/services/com/intelligrape/linksharing/BootstrapService.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/services/com/intelligrape/linksharing/SubscriptionService.groovy" afterPath="$PROJECT_DIR$/grails-app/services/com/intelligrape/linksharing/SubscriptionService.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/services/com/intelligrape/linksharing/TopicService.groovy" afterPath="$PROJECT_DIR$/grails-app/services/com/intelligrape/linksharing/TopicService.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/topic/createTopic.gsp" afterPath="$PROJECT_DIR$/grails-app/views/topic/createTopic.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/intelligrape/linksharing/TopicCommand.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/intelligrape/linksharing/TopicCommand.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/login/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/login/index.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/register/passwordReset.gsp" afterPath="$PROJECT_DIR$/grails-app/views/register/passwordReset.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/intelligrape/linksharing/PasswordCommand.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/intelligrape/linksharing/PasswordCommand.groovy" />
     </list>
     <ignored path="linksharing.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,52 +78,16 @@
       <file leaf-file-name="RegisterController.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/RegisterController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="34" selection-start="324" selection-end="324" vertical-scroll-proportion="-5.2173915">
+            <state line="29" column="38" selection-start="1031" selection-end="1031" vertical-scroll-proportion="-18.913044">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApplicationFilters.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/com/intelligrape/linksharing/ApplicationFilters.groovy">
+      <file leaf-file-name="User.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/intelligrape/linksharing/User.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="40" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TopicController.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/TopicController.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="8" selection-start="180" selection-end="180" vertical-scroll-proportion="-5.869565">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="createTopic.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/topic/createTopic.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="82" selection-start="876" selection-end="876" vertical-scroll-proportion="-7.3404255">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LinkResourceController.groovy" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/LinkResourceController.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="23" selection-start="896" selection-end="896" vertical-scroll-proportion="0.5988024">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Topic.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/intelligrape/linksharing/Topic.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="23" column="10" selection-start="573" selection-end="573" vertical-scroll-proportion="-7.840909">
               <folding />
             </state>
           </provider>
@@ -143,40 +96,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TopicCommand.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/groovy/com/intelligrape/linksharing/TopicCommand.groovy">
+      <file leaf-file-name="UserController.groovy" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/UserController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="53" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0">
+            <state line="12" column="78" selection-start="471" selection-end="486" vertical-scroll-proportion="0.3448276">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messages.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/i18n/messages.properties">
+      <file leaf-file-name="SubscriptionService.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/services/com/intelligrape/linksharing/SubscriptionService.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="38" selection-start="1573" selection-end="1573" vertical-scroll-proportion="-12.857142">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="ResourceBundle">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/user/dashboard.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="70" selection-start="1168" selection-end="1168" vertical-scroll-proportion="10.212766">
+            <state line="7" column="68" selection-start="238" selection-end="248" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TopicService.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/services/com/intelligrape/linksharing/TopicService.groovy">
+      <file leaf-file-name="passwordReset.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/register/passwordReset.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="10" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
+            <state line="14" column="59" selection-start="279" selection-end="279" vertical-scroll-proportion="-4.4680853">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/LoginController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="11" selection-start="681" selection-end="681" vertical-scroll-proportion="-15.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PasswordCommand.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/intelligrape/linksharing/PasswordCommand.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="29" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -195,22 +154,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/user/home.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/UserController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/login/login.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/register/forgotPassword.gsp" />
         <option value="$PROJECT_DIR$/grails-app/conf/com/intelligrape/linksharing/ApplicationFilters.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/intelligrape/linksharing/passwordCommand.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/register/passwordReset.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/LoginController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/RegisterController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/SubscriptionController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/i18n/messages.properties" />
         <option value="$PROJECT_DIR$/src/groovy/com/intelligrape/linksharing/TopicCommand.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/TopicController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/topic/createTopic.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/LinkResourceController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/com/intelligrape/linksharing/User.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/services/com/intelligrape/linksharing/BootstrapService.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/register/passwordReset.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/ReadingItemController.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/intelligrape/linksharing/PasswordCommand.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/RegisterController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/LoginController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/services/com/intelligrape/linksharing/SubscriptionService.groovy" />
       </list>
     </option>
   </component>
@@ -731,81 +690,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/LoginController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="27" selection-start="143" selection-end="143" vertical-scroll-proportion="0.1724138">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/register/forgotPassword.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="51" selection-start="344" selection-end="344" vertical-scroll-proportion="0.48192772">
-          <folding>
-            <marker date="1370501716000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/intelligrape/linksharing/RegisterCommand.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="60" selection-start="736" selection-end="736" vertical-scroll-proportion="0.74204946">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/intelligrape/linksharing/User.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="6" selection-start="577" selection-end="577" vertical-scroll-proportion="-8.181818">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="29" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/RegisterController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="324" selection-end="324" vertical-scroll-proportion="-5.2173915">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/com/intelligrape/linksharing/ApplicationFilters.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="40" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/services/com/intelligrape/linksharing/TopicService.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="10" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/SubscriptionController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="55" selection-start="483" selection-end="483" vertical-scroll-proportion="0.37356323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/user/dashboard.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="70" selection-start="1168" selection-end="1168" vertical-scroll-proportion="10.212766">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/intelligrape/linksharing/Topic.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -826,13 +710,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/intelligrape/linksharing/TopicCommand.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="53" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/TopicController.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="8" selection-start="180" selection-end="180" vertical-scroll-proportion="-5.869565">
@@ -849,7 +726,87 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/LinkResourceController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="23" selection-start="896" selection-end="896" vertical-scroll-proportion="0.5988024">
+        <state line="20" column="23" selection-start="896" selection-end="896" vertical-scroll-proportion="-13.043478">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/services/com/intelligrape/linksharing/BootstrapService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="36" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/ReadingItemController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="59" selection-start="340" selection-end="340" vertical-scroll-proportion="-7.173913">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/intelligrape/linksharing/TopicCommand.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="53" selection-start="380" selection-end="380" vertical-scroll-proportion="0.42402828">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/RegisterController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="38" selection-start="1031" selection-end="1031" vertical-scroll-proportion="-18.913044">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/register/passwordReset.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="59" selection-start="279" selection-end="279" vertical-scroll-proportion="-4.4680853">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/LoginController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="11" selection-start="681" selection-end="681" vertical-scroll-proportion="-15.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/intelligrape/linksharing/User.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="10" selection-start="573" selection-end="573" vertical-scroll-proportion="-7.840909">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/intelligrape/linksharing/PasswordCommand.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="29" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/services/com/intelligrape/linksharing/TopicService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="16" selection-start="454" selection-end="454" vertical-scroll-proportion="0.5229358">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/services/com/intelligrape/linksharing/SubscriptionService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="68" selection-start="238" selection-end="248" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/intelligrape/linksharing/UserController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="78" selection-start="471" selection-end="486" vertical-scroll-proportion="0.3448276">
           <folding />
         </state>
       </provider>

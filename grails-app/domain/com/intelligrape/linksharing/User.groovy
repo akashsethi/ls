@@ -20,7 +20,7 @@ class User {
         username(unique: true, email: true, blank: false)
         password(blank: false)
         subscriptions(unique: true)
-        dateOfBirth(nullable: true)
+//        dateOfBirth(nullable: true)
 
     }
 }

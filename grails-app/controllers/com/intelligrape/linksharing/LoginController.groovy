@@ -7,7 +7,7 @@ class LoginController {
         render(view: "index")
     }
 
-    def authorization() {
+    def auth() {
         User user = User.findByUsernameAndPassword(params.username, params.password)
         if (user) {
             session.currentUser = user.id

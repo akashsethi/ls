@@ -9,7 +9,7 @@ class ReadingItemController {
         try {
             readingItem.isRead = true
             readingItem.save(flush: true)
-            redirect(controller: "user", action: "home")
+            redirect(controller: "user", action: "dashboard")
         }
         catch (Exception e) {
             render "failed"

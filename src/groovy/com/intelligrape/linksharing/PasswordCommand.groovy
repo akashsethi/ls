@@ -9,7 +9,7 @@ class PasswordCommand {
     static constraints={
         conformPassword(validator: {val,obj->
             if(val!=obj.password){
-                return ['registerCommand.password.mismatch.message']
+                return false
             }
         })
     }

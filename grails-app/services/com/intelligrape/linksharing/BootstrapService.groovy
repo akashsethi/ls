@@ -9,8 +9,9 @@ class BootstrapService {
 
     def createUsers() {
         User user = null
+        Date date=Date.parse("dd-MMM-yyyy","23-aug-1993")
         10.times {
-            user = new User(username: "User${it}@gmail.com", password: "igdefault")
+            user = new User(username: "User${it}@gmail.com", password: "igdefault",dateOfBirth: date)
             if (!userService.save(user)) {
                 println user.errors.allErrors
             }

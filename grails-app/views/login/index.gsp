@@ -61,7 +61,7 @@
 
             <div class="nav-collapse collapse">
 
-                <g:form id="commentForm" class="navbar-form pull-right" controller="login" action="authorization">
+                <g:form id="commentForm" class="navbar-form pull-right" controller="login" action="auth">
                     <span>${flash.messages}</span>
                     <input class="span2" name="username" type="email" placeholder="Email" required/>
                     <input class="span2" name="password" type="password" placeholder="Password" required/>

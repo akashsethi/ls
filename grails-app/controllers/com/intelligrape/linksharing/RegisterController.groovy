@@ -31,7 +31,6 @@ class RegisterController {
         if (!passwordCommand?.hasErrors()) {
             User user = User.get(params.userId)
             user.password = passwordCommand.password
-
             if (user.save(flush: true)) {
                 redirect(controller: "login", action: "index")
                 return

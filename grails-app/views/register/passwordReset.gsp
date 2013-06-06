@@ -14,7 +14,7 @@
 </head>
 
 <body>
-<g:form id="passwordValidation" name="" action="savePassword">
+<g:form id="passwordValidation" name="passwordSave" action="savePassword">
     <g:hiddenField name="userId" value="${user.id}"/>
     <div class="controls">
         <g:textField name="username" value="${user.username}" readonly=""/>
