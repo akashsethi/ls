@@ -21,7 +21,7 @@
                 <legend>Please provide Topic details</legend>
                 <g:hiddenField name="currentUser" value="${currentUser}"/>
                 <div><label>Title</label><g:textField name="topicTitle" required="required"/></div>
-
+                <g:renderErrors bean="${topicCommand}" as="list" field="topicTitle"/>
                 <div><label>visibility</label><g:select name="visibility" from="${visibilityConstants}"></g:select>
                 </div>
 

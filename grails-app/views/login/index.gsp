@@ -61,14 +61,13 @@
 
             <div class="nav-collapse collapse">
 
-                <g:form id="commentForm" class="navbar-form pull-right" controller="user" action="loginHandler">
-
+                <g:form id="commentForm" class="navbar-form pull-right" controller="login" action="authorization">
                     <span>${flash.messages}</span>
                     <input class="span2" name="username" type="email" placeholder="Email" required/>
                     <input class="span2" name="password" type="password" placeholder="Password" required/>
 
                     <g:submitButton name="submit" value="signIn" class="btn btn-small btn-primary"/>
-                    <a href="#">forgot password?</a>
+                    <g:link controller="register" action="forgotPassword">forgot password?</g:link>
                 </g:form>
 
             </div><!--/.nav-collapse -->
@@ -76,11 +75,13 @@
     </div>
 </div>
 
+<span class="">${flash.message}</span>
+
 <div class="row-fluid">
     <div class="span5 offset7 well" style="margin-top: 60px">
         <div class="span6 offset1">
-            ${flash.message}
-            <g:form class="form-signin" name="register" action="register">
+
+            <g:form class="form-signin" name="register" controller="register" action="register">
                 <legend>Register</legend>
 
                 <div class="control-group">

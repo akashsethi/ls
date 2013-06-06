@@ -9,8 +9,8 @@ class SubscriptionService {
         subscription
     }
 
-    Subscription subscribe(Topic topic, Seriousness seriousness = Seriousness.CASUAL) {
-        save(new Subscription(topic, seriousness))
+    Subscription subscribe(Topic topic,User user, Seriousness seriousness = Seriousness.CASUAL) {
+        save(new Subscription(topic,user, seriousness))
     }
 
     List<Subscription> subscribedTopicList(User subscriber){

@@ -10,8 +10,8 @@ class TopicService {
         topic
     }
 
-    Topic saveAndSubscribe(Topic topic) {
-        if (!(save(topic) && subscriptionService.subscribe(topic))) {
+    Topic saveAndSubscribe(Topic topic,User user) {
+        if (!(save(topic) && subscriptionService.subscribe(topic,user))) {
             topic = null
         }
         topic

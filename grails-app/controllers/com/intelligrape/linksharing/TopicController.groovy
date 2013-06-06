@@ -7,31 +7,23 @@ class TopicController {
 
     def createTopic() {
         User currentUser = User.get(1)
-        println currentUser.class
         List<Visibility> visibilities = Visibility.values()
         List<Seriousness> seriousness = Seriousness.values()
         [visibilityConstants: visibilities, seriousnessConstants: seriousness, currentUser: currentUser.id]
     }
 
     def saveTopic(TopicCommand topicCommand) {
-        try {
+        if (!topicCommand?.hasErrors()) {
             User user = User.get(params.currentUser)
-            Topic topic = topicService.saveAndSubscribe(new Topic(owner: user, visibility: topicCommand.visibility,
-                    topicName: topicCommand.topicTitle))
-            render "topic created As Well As subscribed"
-        }
-        catch (Exception e) {
-            render e.message
-        }
-    }
+            if (topicService.saveAndSubscribe(new Topic(owner: user, visibility: topicCommand.visibility,
+                    topicName: topicCommand.topicTitle), user)) {
+                flash.message = g.message(code: 'topic.creation.successful', default: 'topic is created as well as subscribed')
+                redirect(controller: "user", action: "dashboard")
+                return
+            }
 
-
-    def listTopic() {
-        if (session.currentUser) {
-            User currentUser = User.get(session.currentUser)
-            List<Topic> ownedTopic = topicService.ownedTopic(currentUser)
-            render ownedTopic
         }
+        render(view: "createTopic", model: [topicCommand: topicCommand])
     }
 
 }

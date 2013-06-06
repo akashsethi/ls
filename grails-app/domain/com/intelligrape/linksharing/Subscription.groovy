@@ -12,8 +12,8 @@ class Subscription {
 
     }
 
-    Subscription(Topic topic, Seriousness seriousness = Seriousness.CASUAL) {
-        subscriber = topic?.owner
+    Subscription(Topic topic,User user, Seriousness seriousness = Seriousness.CASUAL) {
+        subscriber = user
         this.topic = topic
         this.seriousness = seriousness
     }

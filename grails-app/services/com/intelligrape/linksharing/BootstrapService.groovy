@@ -23,7 +23,7 @@ class BootstrapService {
         Subscription subscription = null
         User.list().eachWithIndex {user, index ->
             topic = new Topic(owner: user, topicName: "Topic${index}", visibility: Visibility.PUBLIC)
-            if (!(topicService.saveAndSubscribe(topic))) {
+            if (!(topicService.saveAndSubscribe(topic,user))) {
                 println topic.errors.allErrors
                 println subscription.errors.allErrors
             }
