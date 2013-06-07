@@ -9,7 +9,7 @@ class UserController {
     def dashboard() {
 
         User currentUser = User.get(session.currentUser)
-        List<Subscription> subscribedTopicList =currentUser.subscribedTopicList()
+        List<Subscription> subscribedTopicList = currentUser.subscribedTopicList()
         List maxSubscribedTopic = Subscription.createCriteria().list {
             projections {
                 groupProperty("topic")
@@ -19,7 +19,7 @@ class UserController {
                 eq('visibility', Visibility.PUBLIC)
             }
             order('countMaxTopic', 'desc')
-            maxResults 9
+            maxResults 5
 
         }
         List<Topic> topics = []

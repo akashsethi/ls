@@ -17,7 +17,7 @@ class LinkResourceService {
         linkResource
     }
 
-    List<LinkResource> list(User user) {
-        return LinkResource.findAllByCreator(user)
-    }
+//    List<LinkResource> list(User user) {
+//        return LinkResource.findAllByCreator(user)
+//    }
 }

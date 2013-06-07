@@ -10,7 +10,7 @@
 
 <body>
 
-<div class="tab-pane span6" >
+<div class="tab-pane span6">
     <table class="table-striped table-hover table table-bordered">
         <thead><tr><th>Subscribed Topic</th></tr></thead>
         <tbody>
@@ -23,7 +23,7 @@
     </table>
 </div>
 
-<div class="tab-pane span6" >
+<div class="tab-pane span6">
     <table class="table-striped table-hover table table-bordered">
         <thead><tr><th>Top Public Topic</th></tr></thead>
         <tbody>

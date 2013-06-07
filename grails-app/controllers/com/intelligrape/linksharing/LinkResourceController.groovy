@@ -26,7 +26,7 @@ class LinkResourceController {
 
     def listLinkResource() {
         User user = User.get(session.currentUser)
-        [listLinkResource: linkResourceService.list(user)]
+        [listLinkResource: user.linkResourceList()]
     }
 
 

@@ -18,6 +18,10 @@ class User {
         Subscription.findAllBySubscriber(this)
     }
 
+    def linkResourceList() {
+        LinkResource.findAllByCreator(this)
+    }
+
     static hasMany = [topics: Topic, subscriptions: Subscription, readingItems: ReadingItem]
 
     static constraints = {
