@@ -12,7 +12,6 @@
 
             <g:form class="" name="createLinkResource" action="saveLinkResource">
                 <legend>Add Link Resource</legend>
-                <g:hiddenField name="userId" value="${creator}"/>
                 <div class="control-group">
                     <div class="controls">
                         <g:textField name="title" placeholder="Title" required="required"/>
@@ -21,7 +20,7 @@
 
                 <div class="control-group">
                     <div class="controls">
-                        <g:select name="topic" from="${subscribedTopic}"></g:select>
+                        <g:textField name="topic" value="${subscribedTopic}" readonly=""/>
                     </div>
                 </div>
 

@@ -7,11 +7,32 @@ class UserController {
     def scaffold = true
 
     def dashboard() {
-        User currentUser = User.get(session.currentUser)
-        List<Topic> publicTopic = topicService.publicTopicList()
-        List<Subscription> subscribedTopicList = subscriptionService.subscribedTopicList(currentUser)
-        List<ReadingItem> readingItemList = readingItemService.readingItemList(currentUser)
-        [publicTopic: publicTopic, user: currentUser, readingItemList: readingItemList, subscribedTopicList: subscribedTopicList]
 
+        User currentUser = User.get(session.currentUser)
+        List<Subscription> subscribedTopicList =currentUser.subscribedTopicList()
+        List maxSubscribedTopic = Subscription.createCriteria().list {
+            projections {
+                groupProperty("topic")
+                count("topic", "countMaxTopic")
+            }
+            'topic' {
+                eq('visibility', Visibility.PUBLIC)
+            }
+            order('countMaxTopic', 'desc')
+            maxResults 9
+
+        }
+        List<Topic> topics = []
+        maxSubscribedTopic.each {topicCountPair ->
+            topics.add(topicCountPair[0])
+        }
+
+        List topUnreadItems = ReadingItem.createCriteria().list {
+            eq("isRead", false)
+            eq("user", currentUser)
+            order("dateCreated", "desc")
+            maxResults(5)
+        }
+        [subscribedTopicList: subscribedTopicList, topPublicTopic: topics, topUnreadItems: topUnreadItems.resource]
     }
 }

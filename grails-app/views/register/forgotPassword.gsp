@@ -22,7 +22,7 @@
     <div class="span6 offset4 well" style="margin-top: 100px">
         <div class="span6 offset1">
             ${flash.message}
-            <g:form id="passwordReset" action="passwordReset">
+            <g:form id="passwordReset" action="resetPassword">
                 <legend>Password Reset</legend>
 
                 <div class="controls">

@@ -1,19 +1,23 @@
 package com.intelligrape.linksharing
 
 class LinkResourceService {
-  def readingItemService
+    def readingItemService
 
-  LinkResource save(LinkResource linkResource){
-      if(!(linkResource?.validate(flush:true)&& linkResource?.save(flush: true))){
-          linkResource=null
-      }
-      linkResource
-  }
+    LinkResource save(LinkResource linkResource) {
+        if (!(linkResource?.validate(flush: true) && linkResource?.save(flush: true))) {
+            linkResource = null
+        }
+        linkResource
+    }
 
-  LinkResource saveAndAddToReadingItem(LinkResource linkResource) {
-       if(!(save(linkResource) && readingItemService.createAndSave(linkResource))) {
-           linkResource=null
-       }
-      linkResource
-  }
+    LinkResource saveAndAddToReadingItem(LinkResource linkResource) {
+        if (!(save(linkResource) && readingItemService.createAndSave(linkResource))) {
+            linkResource = null
+        }
+        linkResource
+    }
+
+    List<LinkResource> list(User user) {
+        return LinkResource.findAllByCreator(user)
+    }
 }

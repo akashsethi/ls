@@ -18,10 +18,6 @@ class LoginController {
         render view: "index"
     }
 
-    def logout(){
-        session.invalidate()
-        flash.message=g.message(code: 'Logout.message',default: 'logout successfully')
-        redirect(controller: "login",action: "index")
-    }
+
 
 }

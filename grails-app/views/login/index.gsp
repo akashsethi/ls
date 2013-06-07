@@ -57,7 +57,7 @@
                 <span class="icon-bar"></span>
             </button>
 
-            <a class="brand" href="${createLink(uri: "/")}">LinkSharing</a>
+            <a class="brand" href="${createLink(controller: "user",action: "dashboard")}">LinkSharing</a>
 
             <div class="nav-collapse collapse">
 
@@ -81,7 +81,7 @@
     <div class="span5 offset7 well" style="margin-top: 60px">
         <div class="span6 offset1">
 
-            <g:form class="form-signin" name="register" controller="register" action="register">
+            <g:form class="form-signin" name="register" controller="register" action="index">
                 <legend>Register</legend>
 
                 <div class="control-group">

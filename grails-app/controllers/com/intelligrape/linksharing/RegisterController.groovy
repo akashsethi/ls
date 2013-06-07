@@ -3,7 +3,7 @@ package com.intelligrape.linksharing
 class RegisterController {
     def userService
 
-    def register(RegisterCommand registerCommand) {
+    def index(RegisterCommand registerCommand) {
         if (!registerCommand?.hasErrors()) {
             User user = new User(username: registerCommand.userName, firstName: registerCommand.firstName,
                     password: registerCommand.password)
@@ -17,10 +17,10 @@ class RegisterController {
 
     def forgotPassword() {}
 
-    def passwordReset() {
+    def resetPassword() {
         User user = User.findByUsernameAndDateOfBirth(params.userName, params.dateOfBirth)
         if (user) {
-            render(view: "passwordReset", model: [user: user])
+            render(view: "resetPassword", model: [user: user])
             return
         }
         flash.message = "not found"
@@ -36,7 +36,6 @@ class RegisterController {
                 return
             }
         }
-        render view: "passwordReset", model: [passwordCommand: passwordCommand]
-
+        render view: "resetPassword", model: [passwordCommand: passwordCommand]
     }
 }

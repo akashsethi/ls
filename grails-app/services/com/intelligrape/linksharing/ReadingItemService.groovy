@@ -13,7 +13,5 @@ class ReadingItemService {
         save(new ReadingItem(resource: linkResource, isFavourite: isFavourite, isRead: isRead, user: linkResource.creator))
     }
 
-    List<ReadingItem> readingItemList(User user) {
-        return ReadingItem.findAllByUserAndIsRead(user, false)
-    }
+
 }

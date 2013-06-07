@@ -26,4 +26,10 @@ class TopicController {
         render(view: "createTopic", model: [topicCommand: topicCommand])
     }
 
+    def listPublicTopic() {
+        User currentUser = User.get(session.currentUser)
+        List<Topic> publicTopic = topicService.publicTopicList()
+        [publicTopic: publicTopic,user: currentUser]
+    }
+
 }

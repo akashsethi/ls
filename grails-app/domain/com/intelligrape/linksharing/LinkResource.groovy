@@ -1,6 +1,7 @@
 package com.intelligrape.linksharing
 
 class LinkResource extends Resource {
+
     String url
     Date dateCreated
     Date lastUpdated
@@ -12,5 +13,6 @@ class LinkResource extends Resource {
     static constraints = {
         url(url: true, unique: true)
     }
+
 
 }

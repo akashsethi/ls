@@ -5,25 +5,28 @@ class LinkResourceController {
     def scaffold = true
 
     def createLinkResource() {
-        User currentUser = User.get(session.currentUser)
-        List<Subscription> subscriptionList = Subscription.findAllBySubscriber(currentUser)
-        [subscribedTopic: subscriptionList.topic, creator: currentUser.id]
-
+        [subscribedTopic: params.subscribedTopic]
     }
 
     def saveLinkResource(LinkResourceCommand linkResourceCommand) {
         if (!linkResourceCommand?.hasErrors()) {
-            User user = User.get(params.userId)
+            //TODO: No need to send user id in params. Can be fetched from session.  -done
+            User user = User.get(session.currentUser)
             Topic topic = Topic.findByTopicName(params.topic)
             LinkResource linkResource = new LinkResource(creator: user, title: params.title, topic: topic, url: params.url)
             if (linkResourceService.saveAndAddToReadingItem(linkResource)) {
-                redirect(controller: "user", action: "home")
+                //TODO: Change redirection   -done
+                redirect(controller: "linkResource", action: "listLinkResource")
                 return
             }
         }
-
         render(view: "createLinkResource", model: [linkResourceCommand: linkResourceCommand])
 
+    }
+
+    def listLinkResource() {
+        User user = User.get(session.currentUser)
+        [listLinkResource: linkResourceService.list(user)]
     }
 
 

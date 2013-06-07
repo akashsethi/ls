@@ -11,7 +11,19 @@ class SubscriptionController {
         if (subscriptionService.subscribe(topic, currentUser)) {
             flash.message = g.message(code: 'subscription.success', default: "Subscription Successful")
         }
-        redirect(controller: "user", action: "dashboard")
+        redirect(controller: "topic", action: "listPublicTopic")
+    }
+
+    def saveSeriousness() {
+        Subscription subscription = Subscription.get(params.subscriptionId)
+        subscription.seriousness = params.seriousness
+        //TODO: use subscriptionService save method -done
+        if (subscriptionService.save(subscription)) {
+            redirect(controller: "subscription", action: "listSubscribedTopics")
+            return
+        }
+        flash.message = "try again"
+        render(view: "updateSeriousness")
     }
 
     def unSubscribeTopic() {
@@ -20,24 +32,14 @@ class SubscriptionController {
 
     def updateSeriousness() {
         Subscription subscription = Subscription.get(params.subscribedTopicId)
-        List<Seriousness> seriousnesses = Seriousness.values()
-        [subscription: subscription, seriousness: seriousnesses]
+        //TODO: Rename seriousness to seriousnessList in model -Done
+        [subscription: subscription, seriousnessList: Seriousness.values()]
     }
 
-    def saveSeriousness() {
-        Subscription subscription = Subscription.get(params.subscriptionId)
-        subscription.seriousness = params.seriousness
-        try {
-
-            subscription.save(flush: true)
-            redirect(controller: "user", action: "home")
-
-        }
-        catch (Exception e) {
-
-            flash.message = "try again"
-            render(view: "updateSeriousness")
-
-        }
+    //TODO: Rename to listSubscribedTopics() -done
+    def listSubscribedTopics() {
+        User currentUser = User.get(session.currentUser)
+        List<Subscription> subscribedTopicList = currentUser.subscribedTopicList()
+        [subscribedTopicList: subscribedTopicList]
     }
 }

@@ -26,7 +26,7 @@
                 </div>
 
                 <div class="control-group">
-                    <g:select name="seriousness" from="${seriousness}"/>
+                    <g:select name="seriousness" from="${seriousnessList}"/>
                 </div>
 
                 <div>
